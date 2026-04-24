@@ -1,17 +1,17 @@
 /**
- * BLUE SERVER â€” QUIZ ENGINE (v1.1)
+ * BLUE SERVER — QUIZ ENGINE (v1.1)
  * Architect: VisualMaster (Agentic Squad)
- * System: Linear Ã— A24 Hibrid
+ * System: Linear × A24 Hibrid
  */
 
 const quizData = [
-    { id: "Q01", q: "Qual seu nÃ­vel de 'Trabalho Manual' hoje?", options: [{ t: "Quase zero. AutomÃ¡tico.", v: 10 }, { t: "2-4h de tarefas robÃ³ticas.", v: 5 }, { t: "Passo o dia no soco em ponta de faca.", v: 0 }] },
-    { id: "Q02", q: "Como vocÃª interage com a IA?", options: [{ t: "Orquestro agentes autÃ´nomos.", v: 10 }, { t: "Perguntas isoladas no ChatGPT.", v: 5 }, { t: "Mal uso ou sÃ³ gramÃ¡tica.", v: 0 }] },
-    { id: "Q03", q: "Onde estÃ¡ seu conhecimento estratÃ©gico?", options: [{ t: "Segundo CÃ©rebro estruturado.", v: 10 }, { t: "Notas espalhadas e cabeÃ§a.", v: 5 }, { t: "NÃ£o tenho registro, improviso.", v: 0 }] },
-    { id: "Q04", q: "Se parar por 48h, o que acontece?", options: [{ t: "A fÃ¡brica opera 24/7.", v: 10 }, { t: "A produÃ§Ã£o desacelera.", v: 5 }, { t: "Tudo para. Sem lucro.", v: 0 }] },
-    { id: "Q05", q: "Quantos agentes trabalham para vocÃª agora?", options: [{ t: "Mais de 5 orquestrados.", v: 10 }, { t: "1 ou 2 GPTs manuais.", v: 5 }, { t: "Zero. Sou eu contra o mundo.", v: 0 }] },
-    { id: "Q06", q: "Qual seu maior gargalo para escalar?", options: [{ t: "Servidor e Tokens (Escala).", v: 10 }, { t: "Falta de tempo (Gargalo Humano).", v: 5 }, { t: "NÃ£o sei por onde comeÃ§ar.", v: 0 }] },
-    { id: "Q07", q: "Construir cÃ³digo ou orquestrar resultado?", options: [{ t: "Orquestrar o sistema.", v: 10 }, { t: "Gosto de codar, mas perco tempo.", v: 5 }, { t: "Preso na sintaxe bÃ¡sica.", v: 0 }] }
+    { id: "Q01", q: "Qual seu nível de 'Trabalho Manual' hoje?", options: [{ t: "Quase zero. Automático.", v: 10 }, { t: "2-4h de tarefas robóticas.", v: 5 }, { t: "Passo o dia no soco em ponta de faca.", v: 0 }] },
+    { id: "Q02", q: "Como você interage com a IA?", options: [{ t: "Orquestro agentes autônomos.", v: 10 }, { t: "Perguntas isoladas no ChatGPT.", v: 5 }, { t: "Mal uso ou só gramática.", v: 0 }] },
+    { id: "Q03", q: "Onde está seu conhecimento estratégico?", options: [{ t: "Segundo Cérebro estruturado.", v: 10 }, { t: "Notas espalhadas e cabeça.", v: 5 }, { t: "Não tenho registro, improviso.", v: 0 }] },
+    { id: "Q04", q: "Se parar por 48h, o que acontece?", options: [{ t: "A fábrica opera 24/7.", v: 10 }, { t: "A produção desacelera.", v: 5 }, { t: "Tudo para. Sem lucro.", v: 0 }] },
+    { id: "Q05", q: "Quantos agentes trabalham para você agora?", options: [{ t: "Mais de 5 orquestrados.", v: 10 }, { t: "1 ou 2 GPTs manuais.", v: 5 }, { t: "Zero. Sou eu contra o mundo.", v: 0 }] },
+    { id: "Q06", q: "Qual seu maior gargalo para escalar?", options: [{ t: "Servidor e Tokens (Escala).", v: 10 }, { t: "Falta de tempo (Gargalo Humano).", v: 5 }, { t: "Não sei por onde começar.", v: 0 }] },
+    { id: "Q07", q: "Construir código ou orquestrar resultado?", options: [{ t: "Orquestrar o sistema.", v: 10 }, { t: "Gosto de codar, mas perco tempo.", v: 5 }, { t: "Preso na sintaxe básica.", v: 0 }] }
 ];
 
 class QuizEngine {
@@ -32,7 +32,7 @@ class QuizEngine {
 
         let html = `
             <div class="quiz-step" style="opacity: 0">
-                <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">${step.id} â€” SCANNING PROTOCOL</p>
+                <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">${step.id} — SCANNING PROTOCOL</p>
                 <h2 class="audit-h2" style="font-size: clamp(1.2rem, 3.5vw, 2.2rem); margin-bottom: 40px; line-height: 1.2;">${step.q}</h2>
                 <div class="flex flex-col gap-3 items-center w-full max-w-lg mx-auto">
                     ${step.options.map((opt, i) => `
@@ -73,8 +73,8 @@ class QuizEngine {
     renderCapture() {
         let html = `
             <div class="quiz-capture" style="opacity: 0">
-                <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">VALIDAÃ‡ÃƒO DE IDENTIDADE</p>
-                <h2 class="audit-h2" style="font-size: 2rem; margin-bottom: 40px;">Para onde enviamos seu <br/><span class="text-[#00D1FF]">Blueprint de OrquestraÃ§Ã£o</span>?</h2>
+                <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">VALIDAÇÃO DE IDENTIDADE</p>
+                <h2 class="audit-h2" style="font-size: 2rem; margin-bottom: 40px;">Para onde enviamos seu <br/><span class="text-[#00D1FF]">Blueprint de Orquestração</span>?</h2>
                 
                 <div class="flex flex-col gap-8 w-full max-w-md mx-auto text-left">
                     <div class="input-group">
@@ -82,7 +82,7 @@ class QuizEngine {
                         <input type="email" id="lead-email" class="audit-input" placeholder="seu@email.com" autocomplete="off">
                     </div>
                     <div class="input-group">
-                        <label class="font-mono text-[8px] uppercase tracking-widest opacity-40">UsuÃ¡rio do X (Twitter)</label>
+                        <label class="font-mono text-[8px] uppercase tracking-widest opacity-40">Usuário do X (Twitter)</label>
                         <input type="text" id="lead-x" class="audit-input" placeholder="@seuusuario" autocomplete="off">
                     </div>
                 </div>
@@ -104,7 +104,7 @@ class QuizEngine {
                     const userX = document.getElementById('lead-x').value;
                     const btn = document.getElementById('btn-submit-lead');
 
-                    if (!email.includes('@')) return alert('Insira um e-mail vÃ¡lido.');
+                    if (!email.includes('@')) return alert('Insira um e-mail válido.');
 
                     // Feedback de carregamento
                     btn.disabled = true;
@@ -145,25 +145,25 @@ class QuizEngine {
         let title, desc, resultClass;
         if (this.score >= 55) {
             title = "MAESTRO EM POTENCIAL";
-            desc = "Seu mindset estÃ¡ alinhado. VocÃª jÃ¡ entende a sinfonia, agora precisa da <strong>FÃ¡brica AgÃªntica</strong> para escalar o lucro sem limites.";
+            desc = "Seu mindset está alinhado. Você já entende a sinfonia, agora precisa da <strong>Fábrica Agêntica</strong> para escalar o lucro sem limites.";
             resultClass = "LEVEL_03";
         } else if (this.score >= 25) {
             title = "ENTUSIASTA DESORGANIZADO";
-            desc = "VocÃª usa ferramentas, mas de forma isolada. Falta o <strong>Mecanismo de OrquestraÃ§Ã£o</strong> para parar de trocar tempo por dinheiro.";
+            desc = "Você usa ferramentas, mas de forma isolada. Falta o <strong>Mecanismo de Orquestração</strong> para parar de trocar tempo por dinheiro.";
             resultClass = "LEVEL_02";
         } else {
-            title = "O OPERÃRIO EXAUSTO";
-            desc = "VocÃª estÃ¡ preso no 'Soco em Ponta de Faca'. Sem automaÃ§Ã£o agÃªntica, vocÃª nunca passarÃ¡ do teto humano de faturamento.";
+            title = "O OPERÁRIO EXAUSTO";
+            desc = "Você está preso no 'Soco em Ponta de Faca'. Sem automação agêntica, você nunca passará do teto humano de faturamento.";
             resultClass = "LEVEL_01";
         }
 
         const finalHtml = `
             <div class="quiz-result" style="opacity: 0">
-                <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">DIAGNÃ“STICO CONCLUÃDO // ${resultClass}</p>
+                <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">DIAGNÓSTICO CONCLUÍDO // ${resultClass}</p>
                 <h2 class="audit-h2" style="font-size: clamp(1.8rem, 5vw, 3.5rem); font-style: italic; margin-bottom: 24px;">${title}</h2>
                 <p class="text-ghost-muted mb-12 max-w-md mx-auto leading-relaxed">${desc}</p>
                 <div class="flex flex-col gap-4 items-center">
-                    <button class="btn" id="btn-checkout-final"><span>ACESSAR O MÃ‰TODO â€” R$ 47,90</span></button>
+                    <button class="btn" id="btn-checkout-final"><span>ACESSAR O MÉTODO — R$ 47,90</span></button>
                     <button class="btn-ghost-link" onclick="location.reload()" style="opacity: 0.4; font-size: 10px; margin-top: 20px;">REINICIAR PROTOCOLO</button>
                 </div>
             </div>
@@ -175,9 +175,9 @@ class QuizEngine {
                 gsap.to(this.container, { opacity: 1, scale: 1, duration: 0.1 });
                 gsap.to(".quiz-result", { opacity: 1, scale: 1, duration: 0.8, ease: "power4.out" });
 
-                // â”€â”€ CHECKOUT BLINDADO â”€â”€
-                // O link Ã© construÃ­do em runtime e verificado por hash de integridade.
-                // Impede que alguÃ©m altere o destino via console/XSS.
+                // ── CHECKOUT BLINDADO ──
+                // O link é construído em runtime e verificado por hash de integridade.
+                // Impede que alguém altere o destino via console/XSS.
                 const _k = [104, 116, 116, 112, 115, 58, 47, 47, 112, 97, 121, 46, 107, 105, 119, 105, 102, 121, 46, 99, 111, 109, 46, 98, 114, 47, 99, 122, 121, 66, 73, 78, 117];
                 const _checkoutURL = _k.map(c => String.fromCharCode(c)).join('');
                 const _hash = _k.reduce((a, b) => ((a << 5) - a + b) | 0, 0);
@@ -185,10 +185,10 @@ class QuizEngine {
 
                 document.getElementById('btn-checkout-final').onclick = function (e) {
                     e.preventDefault();
-                    // VerificaÃ§Ã£o de integridade: se o hash nÃ£o bater, o link foi adulterado
+                    // Verificação de integridade: se o hash não bater, o link foi adulterado
                     if (_hash !== _expectedHash) {
                         console.error('[SECURITY] Checkout integrity violation detected.');
-                        alert('Erro de seguranÃ§a. Recarregue a pÃ¡gina.');
+                        alert('Erro de segurança. Recarregue a página.');
                         return;
                     }
                     window.open(_checkoutURL, '_blank', 'noopener,noreferrer');
