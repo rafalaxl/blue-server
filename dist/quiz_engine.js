@@ -5,13 +5,13 @@
  */
 
 const quizData = [
-    { id: "Q01", q: "Qual seu nível de 'Trabalho Manual' hoje?", options: [{ t: "Quase zero. Automático.", v: 10 }, { t: "2-4h de tarefas robóticas.", v: 5 }, { t: "Passo o dia no soco em ponta de faca.", v: 0 }] },
-    { id: "Q02", q: "Como você interage com a IA?", options: [{ t: "Orquestro agentes autônomos.", v: 10 }, { t: "Perguntas isoladas no ChatGPT.", v: 5 }, { t: "Mal uso ou só gramática.", v: 0 }] },
-    { id: "Q03", q: "Onde está seu conhecimento estratégico?", options: [{ t: "Segundo Cérebro estruturado.", v: 10 }, { t: "Notas espalhadas e cabeça.", v: 5 }, { t: "Não tenho registro, improviso.", v: 0 }] },
-    { id: "Q04", q: "Se parar por 48h, o que acontece?", options: [{ t: "A fábrica opera 24/7.", v: 10 }, { t: "A produção desacelera.", v: 5 }, { t: "Tudo para. Sem lucro.", v: 0 }] },
-    { id: "Q05", q: "Quantos agentes trabalham para você agora?", options: [{ t: "Mais de 5 orquestrados.", v: 10 }, { t: "1 ou 2 GPTs manuais.", v: 5 }, { t: "Zero. Sou eu contra o mundo.", v: 0 }] },
-    { id: "Q06", q: "Qual seu maior gargalo para escalar?", options: [{ t: "Servidor e Tokens (Escala).", v: 10 }, { t: "Falta de tempo (Gargalo Humano).", v: 5 }, { t: "Não sei por onde começar.", v: 0 }] },
-    { id: "Q07", q: "Construir código ou orquestrar resultado?", options: [{ t: "Orquestrar o sistema.", v: 10 }, { t: "Gosto de codar, mas perco tempo.", v: 5 }, { t: "Preso na sintaxe básica.", v: 0 }] }
+    { id: "Q01", q: "Como você desenvolve código hoje?", options: [{ t: "Orquestro agentes em sandboxes autônomas.", v: 10 }, { t: "Uso Cursor/Copilot para autocompletar.", v: 5 }, { t: "Copio e colo respostas do ChatGPT.", v: 0 }] },
+    { id: "Q02", q: "Quando sua base de código fica grande, o que acontece com a IA?", options: [{ t: "Ela lê meu Segundo Cérebro (Wiki/Markdown).", v: 10 }, { t: "Ela começa a alucinar e errar o contexto.", v: 5 }, { t: "Eu recomeço o chat do zero.", v: 0 }] },
+    { id: "Q03", q: "Qual a sua maior dificuldade com IA agora?", options: [{ t: "Otimizar o ReAct cycle dos agentes.", v: 10 }, { t: "Fazer a IA entender a arquitetura inteira.", v: 5 }, { t: "Encontrar o 'prompt perfeito'.", v: 0 }] },
+    { id: "Q04", q: "Se um agente autônomo cometer um erro crítico, como você previne o desastre?", options: [{ t: "BashGuards e permissões restritas (Sandbox).", v: 10 }, { t: "Eu olho o código antes dele rodar.", v: 5 }, { t: "Eu rezo para ele não quebrar tudo.", v: 0 }] },
+    { id: "Q05", q: "Qual conceito é mais claro para você?", options: [{ t: "Decomposição Atômica de Tarefas.", v: 10 }, { t: "Engenharia de Prompts (Prompt Engineering).", v: 5 }, { t: "Vibe Coding (Codar na tentativa e erro).", v: 0 }] },
+    { id: "Q06", q: "Como você resolve um bug persistente?", options: [{ t: "Injeto a Fórmula Delta: [Estado Atual] + [Esperado].", v: 10 }, { t: "Digo 'corrige isso, está dando erro'.", v: 5 }, { t: "Peço pra ela reescrever tudo.", v: 0 }] },
+    { id: "Q07", q: "Seu foco atual de estudo de IA é:", options: [{ t: "Criar infraestruturas de orquestração.", v: 10 }, { t: "Aprender a programar mais rápido.", v: 5 }, { t: "Tentar não ficar obsoleto.", v: 0 }] }
 ];
 
 class QuizEngine {
@@ -74,7 +74,7 @@ class QuizEngine {
         let html = `
             <div class="quiz-capture" style="opacity: 0">
                 <p class="font-mono text-[9px] tracking-[0.5em] text-[#00D1FF] mb-8 uppercase">VALIDAÇÃO DE IDENTIDADE</p>
-                <h2 class="audit-h2" style="font-size: 2rem; margin-bottom: 40px;">Para onde enviamos seu <br/><span class="text-[#00D1FF]">Blueprint de Orquestração</span>?</h2>
+                <h2 class="audit-h2" style="font-size: 2rem; margin-bottom: 40px;">Para onde enviamos o seu <br/><span class="text-[#00D1FF]">Blueprint de Orquestração</span>?</h2>
                 
                 <div class="flex flex-col gap-8 w-full max-w-md mx-auto text-left">
                     <div class="input-group">
@@ -145,15 +145,15 @@ class QuizEngine {
         let title, desc, resultClass;
         if (this.score >= 55) {
             title = "MAESTRO EM POTENCIAL";
-            desc = "Seu mindset está alinhado. Você já entende a sinfonia, agora precisa da <strong>Fábrica Agêntica</strong> para escalar o lucro sem limites.";
+            desc = "Seu mindset está alinhado. Você entende os limites do prompt manual. O próximo passo é aplicar o Blueprint para orquestrar seus agentes na prática.";
             resultClass = "LEVEL_03";
         } else if (this.score >= 25) {
-            title = "ENTUSIASTA DESORGANIZADO";
-            desc = "Você usa ferramentas, mas de forma isolada. Falta o <strong>Mecanismo de Orquestração</strong> para parar de trocar tempo por dinheiro.";
+            title = "O DIALOGADOR DE IA";
+            desc = "Você interage com a IA, mas de forma isolada e reativa. Falta a mecânica de um 'Segundo Cérebro' e a estruturação de tarefas autônomas.";
             resultClass = "LEVEL_02";
         } else {
-            title = "O OPERÁRIO EXAUSTO";
-            desc = "Você está preso no 'Soco em Ponta de Faca'. Sem automação agêntica, você nunca passará do teto humano de faturamento.";
+            title = "O EXECUTOR OBSOLETO";
+            desc = "Você está preso no Vibe Coding e copiando código de chats. Para não ficar para trás, você precisa urgentemente dominar as bases da Orquestração.";
             resultClass = "LEVEL_01";
         }
 
@@ -163,7 +163,7 @@ class QuizEngine {
                 <h2 class="audit-h2" style="font-size: clamp(1.8rem, 5vw, 3.5rem); font-style: italic; margin-bottom: 24px;">${title}</h2>
                 <p class="text-ghost-muted mb-12 max-w-md mx-auto leading-relaxed">${desc}</p>
                 <div class="flex flex-col gap-4 items-center">
-                    <button class="btn" id="btn-checkout-final"><span>ACESSAR O MÉTODO — R$ 47,90</span></button>
+                    <button class="btn" id="btn-checkout-final"><span>ACESSAR O BLUEPRINT — R$ 47,90</span></button>
                     <button class="btn-ghost-link" onclick="location.reload()" style="opacity: 0.4; font-size: 10px; margin-top: 20px;">REINICIAR PROTOCOLO</button>
                 </div>
             </div>
@@ -176,8 +176,6 @@ class QuizEngine {
                 gsap.to(".quiz-result", { opacity: 1, scale: 1, duration: 0.8, ease: "power4.out" });
 
                 // ── CHECKOUT BLINDADO ──
-                // O link é construído em runtime e verificado por hash de integridade.
-                // Impede que alguém altere o destino via console/XSS.
                 const _k = [104, 116, 116, 112, 115, 58, 47, 47, 112, 97, 121, 46, 107, 105, 119, 105, 102, 121, 46, 99, 111, 109, 46, 98, 114, 47, 99, 122, 121, 66, 73, 78, 117];
                 const _checkoutURL = _k.map(c => String.fromCharCode(c)).join('');
                 const _hash = _k.reduce((a, b) => ((a << 5) - a + b) | 0, 0);
@@ -185,7 +183,6 @@ class QuizEngine {
 
                 document.getElementById('btn-checkout-final').onclick = function (e) {
                     e.preventDefault();
-                    // Verificação de integridade: se o hash não bater, o link foi adulterado
                     if (_hash !== _expectedHash) {
                         console.error('[SECURITY] Checkout integrity violation detected.');
                         alert('Erro de segurança. Recarregue a página.');
